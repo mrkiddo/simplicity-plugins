@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simplicity jQuery Components - Test</title>
+<link rel="stylesheet" href="css/simplicity.css">
+</head>
+<body>
+
+  <div class="menu-wrapper">
+  	
+    <div class="menu-bar">
+  	  <ul>
+  	    <li class="no-menu"><a href="#">Home</a></li>
+  	    <li><a href="">Category 1</a></li>
+  	    <li><a href="">Category 2</a></li>
+  	    <li><a href="">Category 3</a></li>
+  	    <li><a href="">Category 4</a></li>
+  	  </ul>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-content clearfix">
+        <div class="content-left">
+          <h4 class="content-left-title">Category</h4>
+          <p>Aenean. non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnat. Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Aenean faucibus molestie lorem. Donec in nunc purus. Vest ibulum ante ipsum primis in faucibus orci luctus et ult rices posuere cubilia Curae</p>
+        </div>
+        <div class="content-right">
+          <div class="content-right-item">
+          	<span><strong>List 1</strong></span>
+          	<ul>
+          	  <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+          	  <li><a href="#">Link3</a></li>
+          	  <li><a href="#">Link4</a></li>
+          	  <li><a href="#">Link5</a></li>
+          	  <li><a href="#">Link6</a></li>
+          	  <li><a href="#">Link7</a></li>
+          	</ul>
+          </div>
+          <div class="content-right-item">
+          	<span><strong>List 2</strong></span>
+          	<ul>
+          	  <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+          	  <li><a href="#">Link3</a></li>
+          	  <li><a href="#">Link4</a></li>
+          	  <li><a href="#">Link5</a></li>
+          	  <li><a href="#">Link6</a></li>
+          	  <li><a href="#">Link7</a></li>
+          	</ul>
+          </div>
+          <div class="content-right-item">
+          	<span><strong>List 3</strong></span>
+          	<ul>
+          	  <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+          	  <li><a href="#">Link3</a></li>
+          	  <li><a href="#">Link4</a></li>
+          	  <li><a href="#">Link5</a></li>
+          	  <li><a href="#">Link6</a></li>
+          	  <li><a href="#">Link7</a></li>
+          	</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroller">
+
+    <div class="img-wrapper">
+
+      <div class="img-item">
+        <img src="img/a-mount_lens_sm.jpg" width="242px" height="200px">
+        <div class="img-caption">A-mount lens</div>
+      </div>
+
+      <div class="img-item">
+        <img src="img/e-mount_lens_sm.jpg" width="242px" height="200px">
+        <div class="img-caption">E-mount lens</div>
+      </div>
+
+      <div class="img-item">
+        <img src="img/holder242x200.jpg" width="242px" height="200px">
+        <div class="img-caption">Holder</div>
+      </div>
+
+      <div class="img-item">
+        <img src="img/fe5518_sm.jpg" width="242px" height="200px">
+        <div class="img-caption">FE 55 F1.8</div>
+      </div>
+
+      <div class="img-item">
+        <img src="img/cleaning_sm.jpg" width="242px" height="200px">
+        <div class="img-caption">Cleaners</div>
+      </div>
+      
+    </div>
+
+    <div class="ctrl-wrapper">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+
+    <div class="dire-wrapper">
+      <span class="dir-left"><img src="img/arrow-left.png"></span>
+      <span class="dir-right"><img src="img/arrow-right.png"></span>
+    </div>
+
+  </div>
+
+  <div class="magnifier-wrapper">
+  	
+    <div class="img-default-wrapper">
+      <img class="img-default-show" src="img/fe5518_sm.jpg" data-large-src="img/fe5518.jpg">
+      <div class="img-default-indicator"></div>
+    </div>
+
+    <div class="img-magnifier-wrapper">
+      <div style="width: 500px; height: 500px; overflow: hidden;">
+      	<img class="img-magnifier-zone" style="position: absolute;">
+      </div>
+    </div>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQuery.mouseDelay.min.js"></script>
+<script src="js/simplicity-menu.js"></script>
+<script src="js/simplicity-scroller.js"></script>
+<script src="js/simplicity-img-magnifier.js"></script>
+<script>
+$(document).ready(function(){
+
+	var catelog = ["Category 1", "Category 2", "Category 3", "Category 4"];
+
+	var a = $(".scroller").scroller({delay: 5000, speed: 800});
+	var b = $(".magnifier-wrapper").magnifiers({magnifierRate: 3});
+	var c = $(".menu-wrapper").menu(catelog);
+    console.log(a);
+
+});
+</script>
+
+</body>
+</html>
